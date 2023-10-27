@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graphical Calculator</title>
+    <style>
+        body {
+            background-color: rgb(46 58 70);
+        }
+
+        div {
+            width: 395px;
+            height: 500px;
+            text-align: center;
+            border: 2px solid black;
+            margin: -10px 557px;
+            border-radius: 15px;
+            background-color: rgb(88 11 76);
+        }
+
+        input {
+
+            margin: 73px 11px;
+            padding: 22px 1px;
+            font-size: 30px;
+            background-color: transparent;
+            color: white;
+            cursor: pointer;
+
+
+        }
+
+        .htp {
+            margin: 0px 0px;
+            padding: 16px 42px;
+            box-shadow: 2px 4px 2px rgb(13, 13, 13);
+            color: white;
+            font-size: 17px;
+            width: 95px;
+            height: 50px;
+            border-radius: 4px;
+
+        }
+
+        #mm {
+            background-color: orange;
+        }
+
+        h1 {
+            text-align: center;
+            color: #ef0909;
+            text-shadow: 5px 2px 1px black;
+            font-weight: bold;
+            font-size: 45px;
+        }
+    </style>
+</head>
+<script>
+    function delet(){
+        var num=document.getElementById('input').value;
+        document.getElementById('input').value=num.substring(0,num.length-1);
+    }
+</script>
+
+<body>
+    <h1>Graphical Calculator</h1>
+    <script>
+    </script>
+    <div>
+        <form name="form">
+            <input style="background-color: black; height: 50px; box-shadow: 2px 2px 2px black; text-align: right;" type="text" id="input" name="mynumber">
+
+            <input type="button" style="color: red;" value="C" class="htp" onclick="form.mynumber.value=' '">
+            <input type="button" style="color: red;" value="%" class="htp" onclick="form.mynumber.value+='%'">
+            <input type="button" style="color: red;" value="D" onclick="return delet()" class="htp" onclick="form.mynumber.value+=' '">
+            <input type="button" style="color: red;" value="/" class="htp" onclick="form.mynumber.value+='/'">
+
+            <input type="button" value="7" class="htp" onclick="form.mynumber.value+='7'">
+            <input type="button" value="8" class="htp" onclick="form.mynumber.value+='8'">
+            <input type="button" value="9" class="htp" onclick="form.mynumber.value+='9'">
+            <input type="button" style="color: red;" value="x" class="htp" onclick="form.mynumber.value+='*'">
+
+            <input type="button" value="4" class="htp" onclick="form.mynumber.value+='4'">
+            <input type="button" value="5" class="htp" onclick="form.mynumber.value+='5'">
+            <input type="button" value="6" class="htp" onclick="form.mynumber.value+='6'">
+            <input type="button" style="color: red;" value="-" class="htp" onclick="form.mynumber.value+='-'">
+
+            <input type="button" value="1" class="htp" onclick="form.mynumber.value+='1'">
+            <input type="button" value="2" class="htp" onclick="form.mynumber.value+='2'">
+            <input type="button" value="3" class="htp" onclick="form.mynumber.value+='3'">
+            <input type="button" style="color: red;" value="+" class="htp" onclick="form.mynumber.value+='+'">
+
+
+            <input type="button" value="00" class="htp" onclick="form.mynumber.value+='00'">
+            <input type="button" value="0" class="htp" onclick="form.mynumber.value+='0'">
+            <input type="button" value="." class="htp" onclick="form.mynumber.value+='.'">
+            <input type="button" id="mm" value="=" class="htp" onclick="form.mynumber.value=eval(form.mynumber.value)">
+
+
+        </form>
+    </div>
+
+</body>
+
+</html>
